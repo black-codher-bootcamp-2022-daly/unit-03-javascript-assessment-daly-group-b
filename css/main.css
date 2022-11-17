@@ -1,0 +1,22 @@
+body {
+  background-color: olive;
+}
+.casing {
+  border-radius: 10px;
+  border-style: solid;
+  width: 350px;
+  margin: 20px auto;
+}
+.timeline-item-title {
+  text-align: center;
+}
+.timeline-item-summary {
+  font-family: cursive;
+}
+.timeline-item-more-info {
+  background-color: burlywood;
+  text-align: center;
+  border-radius: 40px;
+  margin: auto;
+  display: flex;
+}
