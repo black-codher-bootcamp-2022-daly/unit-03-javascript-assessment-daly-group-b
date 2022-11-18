@@ -12,6 +12,7 @@ body {
 }
 .timeline-item-summary {
   font-family: cursive;
+  text-align: center;
 }
 .timeline-item-more-info {
   background-color: burlywood;
