@@ -15,18 +15,18 @@ const project = document.querySelector(".timeline");
 
 const firstDivContent = `<div class = "container"><div class = "casing"><h2 class= "timeline-item-title"> Yeast </h2>
 <span class = "timeline-item-date">2600 BC</span>
-<p class = "timeline-item-summary">The Egyptians were also pioneers in baking as the first recorded civilization to use yeast in their bread as long ago as 2600 BC.</p>
+<p class = "timeline-item-summary">The Egyptians are the first recorded civilization to use yeast.</p>
 <button class = "timeline-item-more-info" id= "moreButton" data-open = "learnmore" >more details </button></div>
 <div class = "casing">
 <h2 class= "timeline-item-title"> Sugar </h2>
 <span class = "timeline-item-date">1069 AD</span>
-<p class = "timeline-item-summary">Sugar was a luxury in Europe until the early 19th century. The first sugar was recorded in England in 1069.</p>
+<p class = "timeline-item-summary">The first recorded use of sugar in England.</p>
 <button class = "timeline-item-more-info">more details </button></div>
 </div>
 <div class = "casing">
 <h2 class= "timeline-item-title"> Icing sugar </h2>
 <span class = "timeline-item-date">1494 AD</span>
-<p class = "timeline-item-summary">Icing sugar was invented. It was originally used as a topping for marchpanes, an almond and sugar dessert.</p>
+<p class = "timeline-item-summary">Icing sugar was invented.</p>
 <button class = "timeline-item-more-info">learn more </button></div>
 </div>
 <div class = "casing"><h2 class= "timeline-item-title"> Soufflé </h2>
