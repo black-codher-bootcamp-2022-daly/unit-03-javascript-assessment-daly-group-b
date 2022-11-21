@@ -21,7 +21,7 @@ header {
 .timeline {
   content: "";
   border-left: 6px solid green;
-  height: 160rem;
+  height: 149rem;
   position: absolute;
   margin-top: 100px;
 }
@@ -29,12 +29,15 @@ header {
 .casing {
   justify-content: center;
   position: relative;
-
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #dde3ee;
+  border-color: green;
   border-style: solid;
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
   margin-left: 17px;
   margin-bottom: 7rem;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 50%;
 }
 /* designing the circles used as anchor */
@@ -49,6 +52,14 @@ header {
   top: 15px;
   border-radius: 50%;
   z-index: 1;
+}
+
+.timeline-item-more-info:hover {
+  cursor: pointer;
+  transition: all 200ms ease;
+  background: green;
+  color: whitesmoke;
+  border-radius: 15px;
 }
 /*designing content of the modal pop up after click */
 
