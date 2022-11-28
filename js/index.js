@@ -4,8 +4,8 @@ const content = dates.map(function (value) {
   let modaldiv = document.createElement("div");
   datesModal.classList.add("timeline-item");
   modaldiv.classList.add("timeline-item");
-  datesModal.innerHTML = `<div><h1 class="timeline-item-title">${value["title"]}
-  </h1>
+  datesModal.innerHTML = `<div><h2 class="timeline-item-title">${value["title"]}
+  </h2>
   <div><span class= "timeline-item-date">${value["date"]}</span></div>
   <div class = "timeline-item-summary">${value["summary"]}</div>
   <button class = "timeline-item-more-info" id="myBtn" >More Details</button></div>`;
