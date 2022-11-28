@@ -1,94 +1,177 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-header {
-  font-size: 50px;
-  text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: green;
-  text-decoration: underline;
-  text-decoration-color: black;
-}
 .timeline {
-  position: absolute;
-  left: 50%;
-  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
   padding: 100px 0;
 }
-/* vertical line design */
-.timeline {
-  content: "";
-  border-left: 6px solid green;
-  height: 149rem;
-  position: absolute;
-  margin-top: 100px;
-}
-/* casing of the modal */
-.casing {
-  justify-content: center;
+.timeline-item {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
   position: relative;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #dde3ee;
-  border-color: green;
-  border-style: solid;
-  padding: 1rem 1rem;
-  margin-left: 17px;
-  margin-bottom: 7rem;
-  border-radius: 15px;
-  width: 50%;
 }
-/* designing the circles used as anchor */
-.casing::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  left: -2.35rem;
-  background-color: goldenrod;
-  border: 4px solid darkgreen;
-  top: 15px;
-  border-radius: 50%;
+.timeline-item {
+  padding: 20px;
+  background-color: #1e1f22;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-item h2 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 10px;
+  color: aqua;
+}
+.timeline-item p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-item-date {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.modal {
+  display: none;
+  position: fixed;
   z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(142, 52, 52, 0.5);
 }
-
-.timeline-item-more-info:hover {
+#modal-date {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+.modal-content {
+  background-color: rgb(184, 130, 64);
+  margin: 20% auto;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2) 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+.closePage {
+  color: #ccc;
+  float: right;
+  font-size: 15px;
+}
+.closePage:hover,
+.closePage:focus {
+  color: black;
+  text-decoration: none;
   cursor: pointer;
-  transition: all 200ms ease;
-  background: green;
-  color: whitesmoke;
-  border-radius: 15px;
 }
-/*designing content of the modal pop up after click */
-
-.modalContent {
-  font-size: 12px;
-  width: 50%;
-  position: relative;
-  max-height: 20vh;
-  padding-bottom: 30vh;
-  padding-left: 20px;
-  margin-right: 10px;
-}
-.modalContent p {
-  font-size: 18px;
-  text-align: center;
-  width: 10rem;
-}
-
-@media screen and (max-width: 800) {
-  casing::after {
+@media only screen and (min-width: 768px) {
+  .timeline-item::before {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 25px;
-    right: 14rem;
-    background-color: white;
-    border: 4px solid green;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
+    height: 100%;
+    width: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(148, 135, 179);
   }
+}
+.timeline-item {
+  width: 50%;
+  margin-bottom: 50px;
+  position: relative;
+}
+.timeline-item:nth-child(odd) {
+  float: left;
+  clear: right;
+  transform: translate(-30px);
+  border-radius: 20px 0px 20px 20px;
+}
+.timeline-item:nth-child(even) {
+  float: right;
+  clear: left;
+  transform: translate(30px);
+  border-radius: 0px 20px 20px 20px;
+}
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: gray;
+  border-radius: 50%;
+  top: 0;
+}
+.timeline-item:nth-child(odd)::after {
+  transform: translate(50%, -50%);
+  right: -30px;
+}
+.timeline-item:nth-child(even)::after {
+  transform: translate(-50%, 50%);
+  left: -30px;
+}
+.timeline-item:hover:after {
+  background-color: aqua;
+}
+
+.timeline-item-more-info {
+  border-radius: 20px solid red;
+  padding: 2px;
+}
+.timeline-item-more-info:hover {
+  background-color: aqua;
+  padding: 2px;
+  border: 0;
+}
+.modal1 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-container {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.modal-close-button {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
