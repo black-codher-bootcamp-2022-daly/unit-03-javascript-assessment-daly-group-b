@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-color: black;
+  background-image: url("./Picture/Baking.jpeg");
+}
 .timeline {
   display: flex;
   flex-direction: column;
@@ -21,30 +24,35 @@
   position: relative;
 }
 .timeline-item {
+  font-family: "Nunito Sans", "sans-serif";
   padding: 20px;
-  background-color: #1e1f22;
-  color: white;
+  background-color: gray;
+  color: black;
   border-radius: 10px;
   margin-bottom: 20px;
+  border-color: black;
+  border: solid;
 }
 .timeline-item:last-child {
   margin-bottom: 0;
 }
 .timeline-item h2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 30px;
   margin-bottom: 10px;
-  color: aqua;
+  color: black;
 }
 .timeline-item p {
-  font-size: 16px;
+  font-size: 10px;
   line-height: 30px;
-  font-weight: 300;
+  font-weight: lighter;
 }
 .timeline-item-date {
   font-size: 15px;
-  font-weight: 300;
+  color: whitesmoke;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 .modal {
@@ -56,21 +64,26 @@
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: rgba(142, 52, 52, 0.5);
+  background-color: rgb(243, 230, 230, 0.5);
+}
+#modal-image {
+  align-items: center;
 }
 #modal-date {
   font-size: 16px;
   margin-bottom: 2px;
 }
 .modal-content {
-  background-color: rgb(184, 130, 64);
+  background-color: gray;
+  font-family: "Nunito Sans", sans-serif;
   margin: 20% auto;
+  align-items: center;
   padding: 20px;
   width: 80%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2) 0 7px 20px 0 rgba(0, 0, 0, 0.17);
 }
 .closePage {
-  color: #ccc;
+  color: black;
   float: right;
   font-size: 15px;
 }
@@ -83,7 +96,7 @@
 @media only screen and (min-width: 768px) {
   .timeline-item::before {
     content: "";
-    position: absolute;
+    position: relative;
     height: 100%;
     width: 5px;
     left: 50%;
@@ -113,7 +126,7 @@
   position: absolute;
   height: 20px;
   width: 20px;
-  background-color: gray;
+  background-color: black;
   border-radius: 50%;
   top: 0;
 }
@@ -126,17 +139,22 @@
   left: -30px;
 }
 .timeline-item:hover:after {
-  background-color: aqua;
+  background-color: white;
 }
 
 .timeline-item-more-info {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   border-radius: 20px solid red;
   padding: 2px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 .timeline-item-more-info:hover {
-  background-color: aqua;
+  background-color: black;
+  color: white;
   padding: 2px;
   border: 0;
+  cursor: pointer;
 }
 .modal1 {
   display: none;
@@ -173,5 +191,4 @@
 .modal-close-button:focus {
   color: #000;
   text-decoration: none;
-  cursor: pointer;
 }
