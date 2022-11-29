@@ -1,6 +1,4 @@
 import { dates } from "./data.js";
-const new_div = document.createElement("div");
-new_div.classList.add("timeline-items");
 const content = dates.map(function (value) {
   let datesModal = document.createElement("div");
   let modaldiv = document.createElement("div");
@@ -19,7 +17,7 @@ const content = dates.map(function (value) {
   
   <h1 id="modal-title">${value["title"]} </h1>
  
-  <img id="modal-image"src="${value["image"]}" width=200 height=100>
+  <img id="modal-image"src="${value["image"]}" width=100 height=100>
 </img>
 <p id="modal-full-description">${value["fullDescription"]}</p>
 </div>
@@ -57,5 +55,3 @@ content.modaldiv;
 content.forEach((value) => {
   main.append(value);
 });
-content.parentNode.insertBefore(new_div, content);
-new_div.appendChild(content);
