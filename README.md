@@ -1,4 +1,4 @@
-[TODO: Replace with your Netflify status badge]
+[[![Netlify Status](https://api.netlify.com/api/v1/badges/f46b0ade-b90b-407f-8833-62c778a11b11/deploy-status)](https://app.netlify.com/sites/melodic-queijadas-d43000/deploys)]
 
 # JavaScript Assessment
 
