@@ -12,7 +12,7 @@ const content = dates.map(function (value) {
 
   modaldiv.innerHTML = `<div class="modal">
 <div class="modal-content" id="modal-container">
-<span class="modal-close-button" id="modal-close-button"> CLOSE </span>
+<span class="modal-close-button" id="modal-close-button"> X </span>
 <div><span id= "modal-date">${value["date"]} </span></div>
   
   <h1 id="modal-title">${value["title"]} </h1>
