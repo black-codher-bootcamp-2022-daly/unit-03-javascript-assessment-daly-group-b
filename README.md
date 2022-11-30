@@ -1,4 +1,4 @@
-[TODO: Replace with your Netflify status badge]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7e40a3e3-c110-4554-92d5-179f1412c6e1/deploy-status)](https://app.netlify.com/sites/bakerytimeline/deploys)]
 
 # JavaScript Assessment
 
